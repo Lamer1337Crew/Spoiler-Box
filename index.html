@@ -1,0 +1,69 @@
+</!DOCTYPE html>
+<html>
+<body>
+<title>Spoiler Box</title>
+<style>
+
+/* Spoiler Box Pure CSS by VanGans (bukanakumas.com) */
+
+.vangansSpoiler {
+	display:block; 
+	margin:10px 0px; 
+	border:1px solid #3498db; 
+	padding:7px 10px; 
+	border-radius:3px; 
+	-moz-border-radius:3px;
+}
+.vangansSpoiler .tombol {
+	background:#3498db; /* Warna tombol */
+	color:#fff; /* Warna tulisan di tombol */
+	display:inline-block; 
+	cursor:pointer; 
+	font:normal 600 14px Tahoma,sans-serif; 
+	padding:0px; 
+	border:none; 
+	outline:none; 
+	line-height:20px; 
+	border-radius:3px; 
+	-moz-border-radius:3px;
+}
+.vangansSpoiler .tombol:focus {
+	pointer-events:none;
+}
+.vangansSpoiler .tombol:before {
+    content:'Lihat Spoiler'; /*Tulisan untuk membuka tombol */
+    display:inline-block; 
+    padding:7px 10px; 
+    border-radius:3px; 
+    -moz-border-radius:3px;
+}
+.vangansSpoiler .tombol:focus::before {
+	content:'Tutup Spoiler'; /*Tulisan untuk menutup tombol */
+    background: #cc0000; /* Warna tombol ketika spoiler terbuka */
+}
+.vangansSpoiler .isi {
+	background:#e4e4e4; /* Warna background isi spoiler */
+	pointer-events:auto; 
+	visibility:hidden; 
+	opacity:0; 
+	height:0px; 
+	transition:all .5s ease;
+}
+.vangansSpoiler .tombol:focus + .isi {
+    visibility:visible; 
+    opacity:1; 
+    height:auto; 
+    margin:10px 0px 5px; 
+    padding:10px 15px; 
+    transition:all .5s ease;
+}
+</style>
+</body>
+<!-- Spoiler Box Pure By VanGans (bukanakumas.com) -->
+<div class="vangansSpoiler">
+	<div class="tombol" tabindex="0"></div>
+	<div class="isi">
+		<!-- Isi Spoiler -->
+		Tulis konten yang ingin disembunyikan disini.
+	</div>
+</html>
